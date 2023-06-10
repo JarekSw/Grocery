@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Product>;
+
+@{
+    ViewData["Title"] = "EcoFood Store";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="empty-space"></div>
+
+<form id="form">
+    <h2>Domowe chleby, świerze ciasta i wyroby</h2>
+    <input id="email" name="email" type="email" required placeholder="Podaj email aby się z nami skontaktować" />
+    <input type="submit" id="submit" value="Zaczynajmy" class="btn" />
+</form>
+
+<section id="onas">
+    <div class="grid">
+        <div class="icon"><img class="image" src="./images/skladniki.png" alt="skladniki" /></div>
+        <div class="description">
+            <h2>Składniki wysokiej jakości</h2>
+            <p>W trosce o jakość naszych produktów do wypieków stosujemy wyłącznie ekologiczne składniki najwyższej jakości od lokalnych sprzedawców.</p>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="icon"><img class="image" src="./images/samochod.png" alt="samochod" /></div>
+        <div class="description">
+            <h2>Szybka dostawa</h2>
+            <p>Dbamy o komfort naszych klientów, poprzez szybkie dostawy na terenie całej Polski.</p>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="icon"><img class="image" src="./images/drzewa.png" alt="drzewa" /></div>
+        <div class="description">
+            <h2>Troska o środowisko</h2>
+            <p>Podczas produkcji ogarniczamy emisję CO2 oraz innych szkodliwych substacji. Nasze wysiłki mają na celu troskę o kondycję naszej wspólnej planety.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gdzie-dzialamy">
+    <img id="video" class="map" src="./images/mapa.png" alt="mapa" />
+</section>
+
+<section id="oferta">
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="text-center">
+                <section id="oferta">
+                    @foreach (var item in Model)
+                    {
+                        <div class="product">
+                            <div class="level"><p>@item.Name</p></div>
+                            <h2 id="price">@item.Price zł</h2>
+                            <ul>
+                                @if (item.Ingredients != null)
+                                {
+                                    @foreach (var item2 in item.Ingredients)
+                                    {
+                                        <li>@item2</li>
+                                    }
+                                }
+
+                            </ul>
+                            <button class="btn">Polub</button>
+                        </div>
+                    }
+                </section>
+            </div>
+        </main>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        &copy; 2023 - Grocery - EcoFood
+    </div>
+</footer>
+
+
+
+
+
+
+
+

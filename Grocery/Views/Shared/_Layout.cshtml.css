@@ -1,0 +1,276 @@
+﻿
+:root {
+    --background: #bdf8ae;
+    --green: #03FF35;
+    --black: #000;
+
+    
+}
+
+.product {
+    background-color: lightgreen;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+p, li {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--black);
+}
+
+body {
+    font-family: Cambria;
+    background-color: var(--background);
+}
+
+#naglowek {
+    font-size: 4rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7.5rem;
+    padding: 0 2.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f0eabd;
+    font-size: 1.6rem;
+}
+
+    header img {
+        position: relative;
+        top: 0.5rem;
+        height: 5rem;
+        max-width: 30rem;
+        align-items: center;
+    }
+
+    header nav {
+        display: flex;
+        min-width: 35%;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+.empty-space {
+    min-height: 7.5rem;
+    width: 100%;
+}
+
+#form {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.75rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+#form input[type='email'] {
+    height: 3rem;
+    max-width: 30rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+#form input[type='submit'] {
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: var(--green);
+    border: none;
+    cursor: pointer;
+}
+
+    #form input[type='submit']:hover, .btn:hover {
+        background-color: var(--orange);
+        transition: 1s;
+    }
+
+#onas {
+    margin: 9rem auto 5rem;
+    max-width: 100rem;
+}
+
+    #onas .grid {
+        display: flex;
+        padding-bottom: 5rem;
+    }
+
+.image {
+    width: 10rem;
+}
+
+.map {
+    width: 80%;
+}
+
+#onas .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--darkorange);
+    font-size: 1.5rem;
+    width: 20rem;
+}
+
+#onas .description {
+    display: flex;
+    flex-direction: column;
+    padding: 0.7rem;
+    justify-content: center;
+    width: 100%;
+}
+
+#gdzie-dzialamy {
+    display: flex;
+    justify-content: center;
+}
+
+
+#oferta {
+    display: flex;
+    justify-content: center;
+    max-width: 100rem;
+    gap: 2rem;
+    margin: 10rem auto;
+    padding: 0 2rem;
+}
+
+li {
+    list-style: none;
+}
+
+#oferta .product {
+    border: 1px solid var(--black);
+    border-radius: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    min-width: 20rem;
+}
+
+#oferta .level {
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    font-weight: 700;
+    background-color: #eff981;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: dashed;
+    border-width: 1px;
+}
+
+#price {
+    border-bottom: inherit;
+    border-width: 3px;
+}
+
+.btn {
+    width: 10rem;
+    height: 3rem;
+    text-transform: uppercase;
+    background-color: var(--green);
+    border: none;
+}
+
+.product h2, .product ul, .product button {
+    margin-bottom: 2rem;
+}
+
+.product li {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #f0eabd;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+    footer ul {
+        display: flex;
+        justify-content: space-between;
+        width: 20rem;
+        padding: 0 1rem 1rem 0;
+    }
+
+    footer p {
+        color: var(--gray);
+    }
+
+@media (max-width: 800px) {
+    #oferta {
+        flex-direction: column;
+        max-width: 32rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header, .empty-space {
+        min-height: 9.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    header img {
+        max-width: 5rem;
+        margin-left: 0;
+        padding-bottom: 1rem;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 2rem 0 0 0rem;
+        padding-bottom: 1rem;
+    }
+
+    .empty-space {
+        min-height: 14.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    body {
+        padding-top: 10rem;
+    }
+}

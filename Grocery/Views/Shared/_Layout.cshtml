@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head >
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+ 
+
+</head>
+<body >
+    <header id="header">
+        <img id="header-img" src="~/images/flower.png" alt="logo image" />
+        <h1 id="naglowek" style="font-family:Cambria;">EcoFoodStore</h1>
+        <nav id="nav-bar">
+            <a href="#">Home</a>
+            <a href="#gdzie-dzialamy">Where</a>
+            <a href="#oferta">Offert</a>
+        </nav>
+        <div id="przycisk" class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Language
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Polski</a></li>
+                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="IndexEng">English</a></li>
+
+            </ul>
+        </div>
+    </header>
+    @RenderBody()
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+
+    
+</body>
+</html>
