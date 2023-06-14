@@ -3,8 +3,6 @@
     --background: #bdf8ae;
     --green: #03FF35;
     --black: #000;
-
-    
 }
 
 .product {
@@ -231,6 +229,9 @@ footer {
     }
 
 @media (max-width: 800px) {
+    header {
+        position: static;
+    }
     #oferta {
         flex-direction: column;
         max-width: 32rem;
@@ -270,7 +271,4 @@ footer {
         font-size: 1.8rem;
     }
 
-    body {
-        padding-top: 10rem;
-    }
 }

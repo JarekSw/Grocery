@@ -4,10 +4,11 @@
     --green: #03FF35;
     --black: #000;
 }
+
 .product {
     background-color: lightgreen;
-    
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -32,9 +33,11 @@ body {
     font-family: Cambria;
     background-color: var(--background);
 }
-#naglowek{
-    font-size:4rem;
+
+#naglowek {
+    font-size: 4rem;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -47,7 +50,6 @@ header {
     left: 0;
     background-color: #f0eabd;
     font-size: 1.6rem;
-    
 }
 
     header img {
@@ -146,7 +148,7 @@ h2 {
 }
 
 
-#oferta {
+#oferta, .oferta {
     display: flex;
     justify-content: center;
     max-width: 100rem;
@@ -159,7 +161,7 @@ li {
     list-style: none;
 }
 
-#oferta .product {
+#oferta .product, .oferta .product {
     border: 1px solid var(--black);
     border-radius: 2px;
     width: 100%;
@@ -167,10 +169,10 @@ li {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    min-width:20rem;
+    min-width: 20rem;
 }
 
-#oferta .level {
+#oferta .level, .oferta .level {
     display: flex;
     height: 4rem;
     width: 100%;
@@ -183,10 +185,8 @@ li {
     border-width: 1px;
 }
 
-#price {
-    
-  
-    border-bottom:inherit;
+.price {
+    border-bottom: inherit;
     border-width: 3px;
 }
 
@@ -204,7 +204,7 @@ li {
 
 .product li {
     padding: 1rem;
-    text-align:center;
+    text-align: center;
 }
 
 footer {
@@ -229,7 +229,15 @@ footer {
     }
 
 @media (max-width: 800px) {
-    #oferta {
+    header {
+        position: static;
+    }
+
+    .empty-space {
+        display: none;
+    }
+
+    #oferta, .oferta {
         flex-direction: column;
         max-width: 32rem;
         width: 100%;
@@ -257,7 +265,7 @@ footer {
     header {
         flex-direction: column;
         padding: 2rem 0 0 0rem;
-        padding-bottom:1rem;
+        padding-bottom: 1rem;
     }
 
     .empty-space {
@@ -266,8 +274,5 @@ footer {
 
     h2 {
         font-size: 1.8rem;
-    }
-    body{
-        padding-top:10rem;
     }
 }

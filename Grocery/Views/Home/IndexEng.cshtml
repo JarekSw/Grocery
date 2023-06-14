@@ -45,14 +45,14 @@
 
 <section id="oferta">
     <div class="container">
-        <main role="main" class="pb-3">
+        <div role="main" class="pb-3">
             <div class="text-center">
-                <section id="oferta">
+                <section class="oferta">
                     @foreach (var item in Model)
                     {
                         <div class="product">
                             <div class="level"><p>@item.Name</p></div>
-                            <h2 id="price">@item.Price zł</h2>
+                            <h2 class="price">@item.Price zł</h2>
                             <ul>
                                 @if (item.Ingredients != null)
                                 {
@@ -68,7 +68,7 @@
                     }
                 </section>
             </div>
-        </main>
+        </div>
     </div>
 </section>
 
